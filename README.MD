@@ -41,12 +41,12 @@ Make sure you have the following dependencies installed globally:
    tsc --init
    ```
 
--Set the rootDir and outDir as src and dist folder
+    - Set the rootDir and outDir as src and dist folder
 
 4. Make a file called .eslintrc(For using ESlint)
 
--Go to **[ESlint Blog](https://blog.logrocket.com/linting-typescript-eslint-prettier/)**
--Use the following config into .eslintrc file
+    - Go to **[ESlint Blog](https://blog.logrocket.com/linting-typescript-eslint-prettier/)**
+    - Use the following config into .eslintrc file
 
     ```bash
     {
