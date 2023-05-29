@@ -213,7 +213,7 @@ Make sure you have the following dependencies installed globally:
         console.log('Database connected successfully')
 
         app.listen(config.port, () => {
-        console.log(`University server is listening on port ${config.port}`)
+        console.log(`Server is listening on port ${config.port}`)
         })
     } catch (error) {
         console.log('Error while connecting database: ', error)
