@@ -46,29 +46,23 @@ Make sure you have the following dependencies installed globally:
 4. Make a file called .eslintrc(For using ESlint)
    -Go to **[ESlint Blog](https://blog.logrocket.com/linting-typescript-eslint-prettier/)**
    -Use the following config into .eslintrc file
+
    ```bash
-   {
+    {
    "parser": "@typescript-eslint/parser",
    "parserOptions": {
-   "ecmaVersion": 13,
-   "sourceType": "module"
+    "ecmaVersion": 13,
+    "sourceType": "module"
    },
    "plugins": ["@typescript-eslint"],
-   // HERE
    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+   "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"]
+   },
+   "env": {
+    "browser": true,
+    "es2021": true
+   }
+   }
    ```
-
-"rules": {
-"@typescript-eslint/no-unused-vars": "error",
-"@typescript-eslint/consistent-type-definitions": ["error", "type"]
-},
-
-"env": {
-"browser": true,
-"es2021": true
-}
-}
-
-```
-
-```
