@@ -151,19 +151,23 @@ Make sure you have the following dependencies installed globally:
 
 ## Server setup-------
 
-1.  For using the .env - Make a folder named config - Make a file named index.ts - Into the index.ts
+1.  For using the .env
 
-        ```bash
-        import dotenv from 'dotenv'
-        import path from 'path'
-        /* This code is using the `dotenv` package to load environment variables from a `.env` file located in
-        the root directory of the project. process.cwd() means the root directory */
-        dotenv.config({
-        path: path.join(process.cwd(), '.env'),
-        })
+    - Make a folder named config
+    - Make a file named index.ts
+    - Into the index.ts
 
-        export default {
-        port: process.env.PORT || 8000,
-        database_string: process.env.DATABASE_STRING,
-        }
-        ```
+      ```bash
+      import dotenv from 'dotenv'
+      import path from 'path'
+      /* This code is using the `dotenv` package to load environment variables from a `.env` file located in
+      the root directory of the project. process.cwd() means the root directory */
+      dotenv.config({
+      path: path.join(process.cwd(), '.env'),
+      })
+
+      export default {
+      port: process.env.PORT || 8000,
+      database_string: process.env.DATABASE_STRING,
+      }
+      ```
