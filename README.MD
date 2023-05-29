@@ -74,3 +74,10 @@ Make sure you have the following dependencies installed globally:
    "include": ["src"], // which files to compile
    "exclude": ["node_modules"], // which files to skip
    ```
+
+5. Make a file named .eslintignore to ignore certhe following files from linting
+   ```bash
+   dist
+   node_modules
+   .env
+   ```
