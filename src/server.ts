@@ -4,7 +4,7 @@ import config from './config'
 
 async function databaseConnection() {
   try {
-    await mongoose.connect(config.database_string as any)
+    await mongoose.connect(config.database_string as string)
     console.log('Database connected successfully')
 
     app.listen(config.port, () => {
