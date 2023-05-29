@@ -149,7 +149,7 @@ Make sure you have the following dependencies installed globally:
 
 ## The setup of typescript, eslint, prettier, husky and lint-staged completed here
 
-## Server setup-------
+## Server setup-------------->
 
 1.  For using the .env
 
@@ -171,3 +171,48 @@ Make sure you have the following dependencies installed globally:
       database_string: process.env.DATABASE_STRING,
       }
       ```
+
+2.  Make a file named app.ts add the following code
+
+    ```bash
+    import express, { Application, Request, Response } from 'express'
+    import cors from 'cors'
+
+    const app: Application = express()
+
+    app.use(cors())
+    app.use(express.json())
+    app.use(express.urlencoded({ extended: true }))
+
+    // Testing route
+    app.get('/', (req: Request, res: Response) => {
+    res.send('Route is working!')
+    })
+
+    export default app
+    ```
+
+3.  Make a file named server.ts and add this following code
+
+    ```bash
+    import mongoose from 'mongoose'
+    import app from './app'
+    import config from './config'
+
+    async function databaseConnection() {
+    try {
+        await mongoose.connect(config.database_string as string)
+        console.log('Database connected successfully')
+
+        app.listen(config.port, () => {
+        console.log(`University server is listening on port ${config.port}`)
+        })
+    } catch (error) {
+        console.log('Error while connecting database: ', error)
+    }
+    }
+
+    databaseConnection()
+    ```
+
+# Done ------------------------------>
