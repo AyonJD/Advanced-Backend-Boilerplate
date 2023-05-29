@@ -41,28 +41,29 @@ Make sure you have the following dependencies installed globally:
    tsc --init
    ```
 
-   -Set the rootDir and outDir as src and dist folder
+-Set the rootDir and outDir as src and dist folder
 
 4. Make a file called .eslintrc(For using ESlint)
-   -Go to **[ESlint Blog](https://blog.logrocket.com/linting-typescript-eslint-prettier/)**
-   -Use the following config into .eslintrc file
 
-   ```bash
+-Go to **[ESlint Blog](https://blog.logrocket.com/linting-typescript-eslint-prettier/)**
+-Use the following config into .eslintrc file
+
+    ```bash
     {
-   "parser": "@typescript-eslint/parser",
-   "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
     "ecmaVersion": 13,
     "sourceType": "module"
-   },
-   "plugins": ["@typescript-eslint"],
-   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
-   "rules": {
+    },
+    "plugins": ["@typescript-eslint"],
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+    "rules": {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/consistent-type-definitions": ["error", "type"]
-   },
-   "env": {
+    },
+    "env": {
     "browser": true,
     "es2021": true
-   }
-   }
-   ```
+    }
+    }
+    ```
