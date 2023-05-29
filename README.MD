@@ -142,7 +142,15 @@ Make sure you have the following dependencies installed globally:
 
    - Here "yarn lint-prettier" used to automatically check the linting problem and formating problem while commiting into git.
 
-10. Navigate .husky > pre-commit and add
+10. Make a hook for husky pre-commit
+
+    ```bash
+    yarn husky add .husky/pre-commit "yarn lint-staged"
+    ```
+
+    - Here yarn lint-staged will target the package.json lint-staged
+
+11. Navigate .husky > pre-commit and add
     ```bash
     yarn lint-staged
     ```
