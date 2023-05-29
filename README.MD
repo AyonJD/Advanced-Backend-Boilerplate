@@ -17,8 +17,18 @@ Make sure you have the following dependencies installed globally:
 
 ### Installation
 
-1. Clone the repository:
+### Project setup with yarn:
 
+```bash
+ npm init -y
+```
+
+1. Install these dependencies
    ```bash
-   git clone https://github.com/your/repository.git
+   yarn add express mongoose eslint dotenv cors
+   ```
+
+2. Install these as devDependencies
+   ```bash
+   yarn add -D typescript ts-node-dev @types/express @types/cors @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier prettier lint-staged husky
    ```
