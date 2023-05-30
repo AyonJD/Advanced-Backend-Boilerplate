@@ -118,7 +118,7 @@ Make sure you have the following dependencies installed globally:
    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
    "start": "node ./dist/server.js",
    "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
-   "lint:fix": "lint --fix",
+   "lint:fix": "lint . --fix",
    "prettier:format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
    "lint-prettier": "yarn lint:check && yarn prettier:format",
    ```
